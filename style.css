@@ -1,0 +1,243 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Screen Styling */
+.welcome {
+    text-align: center;
+    margin: 20% auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.welcome h1 {
+    font-size: 2.5em;
+    color: #ef2704;
+}
+
+.welcome p {
+    font-size: 1.7em;
+    color: #2704f0;
+}
+ 
+
+.welcome button {
+    padding: 12px 25px;
+    background-color: #3e1fda;
+    color: rgb(247, 246, 246);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.welcome button:hover {
+    background-color: #45a049;
+}
+
+/* Quiz Container Styling */
+.container {
+    width: 70%;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    background: #0cd1a6;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Info (Coins & Diamonds) */
+#top-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background-color: #e66f6f;
+    border-bottom: 2px solid #ddd;
+    font-size: 1.2em;
+    color: #f3f3f5;
+}
+
+#top-info div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#coins, #diamonds {
+    font-weight: bold;
+}
+
+#coins i {
+    font-size: 1.5em;
+    color: gold;
+}
+
+#diamonds i {
+    font-size: 1.5em;
+    color: deepskyblue;
+}
+
+#coins-count, #diamonds-count {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Quiz Content Styling */
+#quiz-container {
+    margin-bottom: 25px;
+}
+
+#question {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #0c0101;
+}
+
+#options button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px 25px;
+    background: #eb1081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.1em;
+}
+
+#options button:hover {
+    background: #0056b3;
+}
+
+/* Controls and Next Button */
+#controls {
+    margin-top: 25px;
+}
+
+#next-btn {
+    padding: 12px 25px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.1em;
+}
+
+#next-btn:hover {
+    background: #1e7e34;
+}
+
+/* Result Message Styling */
+#result-message {
+    font-size: 1.4em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ff5722; /* Default color for message */
+}
+
+.correct {
+    color: #28a745;
+}
+
+.wrong {
+    color: #f44336;
+}
+
+/* Retry Section */
+.retry-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.retry-section button {
+    padding: 12px 25px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.retry-section button:hover {
+    background-color: #f57c00;
+}
+
+/* Final Score Section */
+#final-result {
+    margin-top: 60px;
+    text-align: center;
+}
+
+#final-score {
+    font-size: 1.6em;
+    margin-top: 50px;
+    font-weight: bold;
+    color: #f10808;
+}
+
+#final-result button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#final-result button:hover {
+    background-color: #45a049;
+}
+
+
+/* Feedback Section */
+.feedback {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback.correct {
+    color: green;
+    border-color: green;
+}
+
+.feedback.incorrect {
+    color: red;
+    border-color: red;
+}
+#message-container {
+    position: fixed;  /* Fix it at the top of the screen */
+    top: 90px;  /* Adjust as needed to place it below the header */
+    left: 50%;  /* Center the message horizontally */
+    transform: translateX(-50%);  /* To adjust the centering */
+    background-color: rgba(130, 217, 229, 0.7);  /* Dark background for better visibility */
+    color: white;  /* Text color */
+    padding: 5px 5px;  /* Make the message box larger */
+    font-size: 20px;  /* Increase font size */
+    border-radius: 10px;  /* Rounded corners */
+    width: 50%;  /* Adjust the width if necessary */
+    text-align: center;  /* Center the text */
+    z-index: 1000;  /* Ensure it appears on top of other elements */
+    display: none;  /* Initially hidden */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Add some shadow for a raised effect */
+}
+#message-container {
+    transition: opacity 0.3s ease;  /* Smooth fade-in/out */
+    opacity: 0;  /* Default hidden state */
+}

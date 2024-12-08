@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="welcome">
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2024/03/12/09/28/ai-generated-8628373_640.png" alt="Hello!" style="width: 100%; max-width: 300px;">
+        </div>
+        <p>Wanna Test Your Common Sense?</p>
+        <p> (Complete 90 thrilling questions in one go—no progress saved, so stay sharp and keep going till the end!)</p>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+    
+    <div id="feedback" class="feedback" style="display: none;"></div>
+
+    <!-- Coins, Diamonds, and Progress Information -->
+    <div id="top-info" class="top-info">
+        <div id="coins"><i class="fas fa-coins"></i> <span id="coins-count">0</span></div>
+        <div id="diamonds"><i class="fas fa-gem"></i> <span id="diamonds-count">0</span></div>
+        <div id="progress">Progress: 0/0 (0%)</div> <!-- Added progress section -->
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="container" style="display: none;">
+        <h1>Brain Busters: Test Your Wits!</h1>
+        <div id="quiz-container">
+            <div id="question"></div>
+            <div id="options"></div>
+            <!-- Placeholder for Image below Question -->
+            <div id="question-image"></div>
+        </div>
+    </div>
+    <div id="message-container" style="display: none; padding: 10px; font-size: 18px; margin-top: 10px;"></div>
+
+    <!-- Result Section -->
+    <div id="result-message" class="result" style="display: none;"></div>
+
+    <!-- Retry Section -->
+    <div id="retry-section" class="retry-section" style="display: none;">
+        <button id="retry-btn" onclick="retryQuiz()">Retry</button>
+    </div>
+
+    <!-- Final Result Section -->
+    <div id="final-result" class="result" style="display: none;">
+        <h2>Your Score</h2>
+        <div id="final-score"></div>
+        <button onclick="startQuiz()">Play Again</button>
+    </div>
+
+    <!-- Share Message Section -->
+    <div id="share-message" class="modal" style="display: none;">
+        <div class="modal-content">
+        <p id="share-message-text">Can you beat me in this quiz? I've earned 1 diamond!</p>
+        <div class="modal-buttons">
+        <button id="share-btn" onclick="shareScore()">Share</button>
+        <button onclick="hideShareMessage()">Close</button>
+    </div>
+     </div>
+     </div>
+     
+    <!-- Progress Bar and Coins/Diamonds Section -->
+    <script src="script.js"></script>
+</body>
+</html>
